@@ -1,2 +1,12 @@
-
 /* TODO - Write your CSS here */
+nav.navbar {
+  display: flex;
+  align-content: flex-start;
+  font-size: larger;
+  font-weight: bolder;
+  text-decoration-color: black;
+  justify-content: space-between;
+}
+
+.techblog {
+}

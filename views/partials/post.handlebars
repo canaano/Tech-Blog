@@ -1,6 +1,18 @@
-<div>
+<style>
+    .post {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .post h2 {
+        text-decoration: underline;
+
+</style>
+
+<div class="post">
     <h2>{{title}}</h2>
     <p>{{body}}</p>
-    <p>Posted by {{user.username}}</p>
-    <P>Posted on {{createdAt}}</P>
+    <p>Posted by <strong>{{user.username}}</strong></p>
+    <P>Posted on {{format_date createdAt}}</P>
 </div>
