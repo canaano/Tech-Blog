@@ -49,5 +49,30 @@ router.post("/create", withAuth, async (req, res) => {
 
 // TODO - create logic for the GET route for /edit/:id that renders the edit post page
 // It should display a form for editing an existing post
+router.put("/edit/:id", withAuth, async (req, res) => {
+  try {
+    const userPost = await Post.update({
+      where: {
+        id: req.params.id,
+      },
+      where: {
+        body: req.body.body,
+      },
+    });
+
+    if (userPost) {
+      const post = userPost.get({ plain: true });
+      console.log(post);
+      res.render("edit-post", {
+        layout: "dashboard",
+        post,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.redirect("login");
+  }
+});
 
 module.exports = router;
