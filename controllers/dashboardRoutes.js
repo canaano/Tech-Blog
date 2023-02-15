@@ -47,17 +47,45 @@ router.post("/create", withAuth, async (req, res) => {
 // TODO - create logic for the GET route for /new that renders the new post page
 // It should display a form for creating a new post
 
+router.get("/:id", withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+        {
+          model: Comment,
+          attributes: ["body", "userId", "createdAt"],
+          include: {
+            model: User,
+            attributes: ["username"],
+          },
+        },
+      ],
+    });
+
+    if (!postData) {
+      res.status(404).json({ message: "Post ID does not exist" });
+      return;
+    }
+
+    const post = postData.get({ plain: true });
+    //console.log(post);
+    res.render("admin-single-post", { layout: "dashboard", post });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // TODO - create logic for the GET route for /edit/:id that renders the edit post page
 // It should display a form for editing an existing post
 router.put("/edit/:id", withAuth, async (req, res) => {
   try {
     const userPost = await Post.update({
-      where: {
-        id: req.params.id,
-      },
-      where: {
-        body: req.body.body,
-      },
+      where: { id: req.params.id },
+      where: { body: req.body.body },
     });
 
     if (userPost) {
