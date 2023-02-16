@@ -1,12 +1,211 @@
-/* TODO - Write your CSS here */
-nav.navbar {
-  display: flex;
-  align-content: flex-start;
-  font-size: larger;
-  font-weight: bolder;
-  text-decoration-color: black;
-  justify-content: space-between;
+* {
+  box-sizing: border-box;
 }
 
-.techblog {
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightskyblue;
+  border-radius: 10px;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* Header/Blog Title */
+header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: blue;
+  border-radius: 30px;
+}
+#btn {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 6px 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  color: black;
+  text-decoration: none;
+}
+
+#btn:hover {
+  opacity: 0.8;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.column {
+  float: left;
+  width: 75%;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-header {
+  padding: 15px 0 15px 0;
+}
+
+#textArea {
+  display: inline;
+  background-color: #f3f3f3;
+  color: black;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin: 6px 2px 0;
+}
+
+#comment-form {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#login-form,
+#username-input-login,
+#password-input-login,
+#login-btn {
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+
+#textArea {
+  display: inline;
+  background-color: #f3f3f3;
+  color: black;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin: 6px 2px 0;
+}
+
+button {
+  display: inline;
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  margin: 6px 2px 0;
+  border-radius: 30px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  align-content: center;
+}
+
+.add-post {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: blue;
+  border-radius: 30px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#new-post {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
 }
