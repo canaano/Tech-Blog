@@ -11,3 +11,5 @@ Your task this week is to build a CMS-style blog site similar to a Wordpress sit
 ![Tech-Blog](./assets/Screenshot.png)
 
 ## Deployed Site
+
+https://tech-blog-canaano.herokuapp.com/
