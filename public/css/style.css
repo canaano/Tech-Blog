@@ -30,7 +30,6 @@ li a {
   border-radius: 30px;
 }
 
-/* Header/Blog Title */
 header {
   padding: 30px;
   font-size: 40px;
@@ -73,14 +72,11 @@ a:hover {
   color: black;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
 .column {
   float: left;
   width: 75%;
 }
 
-/* Add a card effect for articles */
 .card {
   background-color: white;
   padding: 20px;
@@ -88,7 +84,6 @@ a:hover {
   border-radius: 30px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -200,12 +195,4 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
 }
